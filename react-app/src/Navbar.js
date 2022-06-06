@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default class AppNavbar extends Component {
-  constructer(props) {
+  constructor(props) {
     super(props);
   }
 
