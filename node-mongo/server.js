@@ -7,7 +7,9 @@ require('./app/models/inventory.model.js');
 // Configuring the database
 require('dotenv').config();
 const mongoose = require('mongoose');
+const cors = require('cors');
 
+app.use(cors());
 // Connecting to the database
 mongoose.connect(process.env.DATABASE, {
     useNewUrlParser: true,
@@ -24,7 +26,7 @@ mongoose.connection
 
 require('./app/routes/inventory.router.js')(app);
 // Create a Server
-const server = app.listen(8000, function() {
+const server = app.listen(8080, function() {
     const host = server.address().address
     const port = server.address().port
 
